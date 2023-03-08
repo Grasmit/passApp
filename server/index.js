@@ -68,7 +68,7 @@ app.post('/api/checkPass',(req,res) => {
 
     if(!score)
     {
-        res.json({
+        return res.json({
             "status": "failed",
             "data": {
                 "score":-99,
@@ -81,7 +81,7 @@ app.post('/api/checkPass',(req,res) => {
 
     if(score <= 6)
     {
-        res.json({
+        return res.json({
             "status": "success",
             "data": {
                 "score":score,
@@ -92,7 +92,7 @@ app.post('/api/checkPass',(req,res) => {
     }
     else if(score >= 7 && score <= 11)
     {
-        res.json({
+        return res.json({
             "status": "success",
             "data": {
                 "score":score,
@@ -103,7 +103,7 @@ app.post('/api/checkPass',(req,res) => {
     }
     else if(score >=12 && score <=16)
     {
-        res.json({
+        return res.json({
             "status": "success",
             "data": {
                 "score":score,
@@ -114,7 +114,7 @@ app.post('/api/checkPass',(req,res) => {
     }
     else if(score >=17)
     {
-        res.json({
+        return res.json({
             "status": "success",
             "data": {
                 "score":score,
